@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="kafe.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		
+		<header>
+		
+			<!-- Kommentar: Her defineres header-seksjonen med en menylinje for Vigo's kaffebar. Logo eller navnet på kaffebar er plassert inni en label-tag. Deretter følger en ul-liste med lenker til forskjellige sider i nettsiden, inkludert Hjem, Mat og drikke, Kontakt og Handlekurv. Handlekurv-lenken har også en onclick-hendelseslytter for å åpne handlekurven. -->
+
+			<div class="menylinje">
+				<label>Vigo's kaffebar</label>
+				
+				<ul class="navBar">
+				    <li><a class="active" href="index.html">Hjem</a></li>
+				 	<li><a href="tilbud.html">Mat og drikke</a></li>
+				 	<li><a href="kontakt.html">Kontakt</a></li>
+				 	<li><a href="handlekurv.html"onclick="openCart()">Handlekurv</a></li>
+				</ul>
+			</div>
+		</header>
+
+
+		<div class="side-bar-left">
+			<img class="logo"src="kafeBilde.jpg">
+
+		
+
+
+		</div>
+		
+		<main>
+			
+				
+				<!-- Avsnitt med informasjon om kaffebar -->
+			<p> Vigo's kaffebar befinner seg i <b>sentrum.</b> Dette er den beste kaffebaren i <u>Bergen.</u> Vi har alle typer <i>kaffe</i></p>
+			<br>
+			<br>
+			<img id="kaffe" src="kafebar.jpg">
+
+				<!-- Åpningstider -->
+			<p><b><br>Åpningstider<br/> <br>Man-Fre kl 10.00-21.00<br/> <br>Lør-Søn Kl 12.00-20.00<br/> <b/></p>
+			
+				<!-- Knapp for å navigere til "Om Oss"-siden -->
+			<button onclick="window.location.href = 'OmOss.html';" class="omOssBtn"><p>OM OSS</p></button>
+
+
+    		
+    	
+				
+		<br>
+		<br>
+
+	
+		<section class="footer">
+			
+		<div class="social">
+			
+			<!-- Sosiale medier-ikoner -->
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-snapchat"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-facebook"></i></a>
+		</div>
+
+		<ul class="list">
+			
+			<!-- Navigasjonslenker -->
+			<li>
+				<a href="index.html">Hjem</a>
+			</li>
+
+			<li>
+				<a href="OmOss.html">Om oss</a>
+			</li>
+
+			<li>
+				<a href="kontakt.html">Kontakt oss</a>
+			</li>
+
+
+		</ul>
+
+		</section>
+		</main>
+		
+
+
+	</body>
+</html>

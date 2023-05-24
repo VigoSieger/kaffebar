@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="kafe.css">
+
+</head>
+<body>
+
+
+	<header>
+
+
+			<!-- Kommentar: Her defineres header-seksjonen med en menylinje for Vigo's kaffebar. Logo eller navnet på kaffebar er plassert inni en label-tag. Deretter følger en ul-liste med lenker til forskjellige sider i nettsiden, inkludert Hjem, Mat og drikke, Kontakt og Handlekurv. Handlekurv-lenken har også en onclick-hendelseslytter for å åpne handlekurven. -->
+			<div class="menylinje">
+				<label>Vigo's kaffebar</label>
+		
+				<ul class="navBar">
+				    <li><a href="index.html">Hjem</a></li>
+				    <li><a class="active" href="tilbud.html">Mat og drikke</a></li>
+				 	<li><a href="kontakt.html">Kontakt</a></li>
+				 	<li><a href="handlekurv.html"onclick="openCart()">Handlekurv</a></li>
+				</ul>
+			</div>
+		</header>
+
+
+<div class="meny"></div>
+
+
+
+
+	
+	<h1>Kafémeny</h1>
+	<ul class="menu-list">
+ 
+   <!-- Kommentar: Dette er en kafémeny som viser ulike elementer -->
+    <div class="menu-item">
+      <img src="kaffe.jpg">
+      <div class="details">
+      	<div class="details-sub">
+        <h2>Kaffe</h2>
+        <h5 class="price"> 20kr </h5>  
+      </div>
+        <p>En deilig kopp kaffe brygget fra ferske bønner.</p>
+          <button onclick="addToCart('Kaffe', 20)">Legg i handlekurv</button>
+
+    </div>
+   
+    <div class="menu-item">
+      <img src="te.jpg">
+      <div class="details">
+      	<div class="details-sub">
+        <h2>Te</h2>
+        <h5 class="price"> 15kr </h5>
+      </div>
+      <p>Vi har mange te-varianter.</p>
+      <button onclick="addToCart('Te', 15)">Legg i handlekurv</button>
+          </div>
+  
+
+    <div class="menu-item">
+      <img src="cappuccino.jpg">
+      <div class="details">
+      	<div class="details-sub">
+        <h2>Cappuccino</h2>
+        <h5 class="price"> 25kr </h5>
+      </div>
+      <p>Espresso blandet med varm melk og toppet med melkeskum.</p>
+        <button onclick="addToCart('Cappuccino', 25)">Legg i handlekurv</button>
+
+
+    </div>
+   
+    <div class="menu-item">
+      <img src="espresso.jpg">
+      <div class="details">
+      	<div class="details-sub">
+        <h2>Espresso</h2>
+        <h5 class="price"> 25kr </h5>
+      </div>
+        <p>En kraftig kopp espresso.</p>
+         <button onclick="addToCart('Espresso', 25)">Legg i handlekurv</button>
+
+
+    </div>
+   
+   
+    <div class="menu-item">
+      <img src="kanelbolle.jpg">
+      <div class="details">
+      	<div class="details-sub">
+        <h2>Kanelbolle</h2>
+        <h5 class="price"> 15kr </h5>
+      </div>
+      <p>Saftig bolle med deilig kanel, toppet med melis.</p>
+        <button onclick="addToCart('Kanelbolle', 15)">Legg i handlekurv</button>
+
+
+    </div>
+   
+    <div class="menu-item">
+      <img src="sandwich.jpg">
+      <div class="details">
+      	<div class="details-sub">
+        <h2>Club Sandwich</h2>
+        <h5 class="price"> 60kr </h5>
+      </div>
+        <p>Hjemmelaget sandwich med kylling og andre grønnsaker.</p>
+          <button onclick="addToCart('Club Sandwich', 60)">Legg i handlekurv</button>
+
+
+    </div>
+
+  
+  <script>
+   
+ // Dette skriptet håndterer funksjonaliteten for handlekurven på nettsiden. 
+    let cart = [];
+
+     // Funksjonen åpner handlekurven ved å lagre handlekurven i localStorage og omdirigere til handlekurv.html.
+    function addToCart(itemName, itemPrice) {
+      const item = { name: itemName, price: itemPrice };
+      cart.push(item);
+      alert('Varen er lagt til i handlekurven!');
+    }
+
+    // Funksjonen åpner handlekurven ved å lagre handlekurven i localStorage og omdirigere til handlekurv.html.
+    function openCart() {
+      localStorage.setItem('cartItems', JSON.stringify(cart));
+      window.location.href = "handlekurv.html";
+    }
+  </script>
+
+
+
+
+
+
+
+  
+
+
+       
+
+</body>
+</html>
+       

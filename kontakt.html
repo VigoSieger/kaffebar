@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="kafe.css">
+</head>
+<body>
+
+	<header>
+
+		
+			<!-- Kommentar: Her defineres header-seksjonen med en menylinje for Vigo's kaffebar. Logo eller navnet på kaffebar er plassert inni en label-tag. Deretter følger en ul-liste med lenker til forskjellige sider i nettsiden, inkludert Hjem, Mat og drikke, Kontakt og Handlekurv. Handlekurv-lenken har også en onclick-hendelseslytter for å åpne handlekurven. -->
+			<div class="menylinje">
+				<label>Vigo's kaffebar</label>
+				
+				<ul class="navBar">
+				    <li><a href="index.html">Hjem</a></li>
+				 	<li><a href="tilbud.html">Mat og drikke</a></li>
+				 	<li><a class="active" href="kontakt.html">Kontakt</a></li>
+				 	<li><a href="handlekurv.html"onclick="openCart()">Handlekurv</a></li>
+				</ul>
+			</div>
+		</header>
+
+
+<div class="kontakt">
+  <h1>Kontakt oss</h1>
+
+  <form>
+    <!-- Navnefelt -->
+    <label for="navn">Navn:</label>
+    <input type="text" id="navn" name="navn" required><br>
+    
+    <!-- E-postfelt -->
+    <label for="epost">E-postadresse:</label>
+    <input type="email" id="epost" name="epost" required><br>
+    
+    <!-- Meldingsfelt -->
+    <label for="melding">Melding:</label>
+    <textarea id="melding" name="melding" required></textarea><br>
+    
+    <!-- Send-knapp -->
+    <input type="button" value="Send" onclick="sendKontaktSkjema()">
+  </form>
+  
+  <!-- Resultatelement -->
+  <div id="resultat"></div>
+</div>
+  
+ 
+
+  
+  <script>
+ 
+
+
+
+  function sendKontaktSkjema() {
+    const navnInput = document.getElementById('navn');
+    const epostInput = document.getElementById('epost');
+    const meldingInput = document.getElementById('melding');
+
+    const navn = navnInput.value.trim();
+    const epost = epostInput.value.trim();
+    const melding = meldingInput.value.trim();
+
+    // Validering av skjemaet
+    if (navn === '' || epost === '' || melding === '') {
+      alert('Vennligst fyll ut alle feltene.');
+      return;
+    }
+
+    // Simulerer sending av skjemaet
+    // Her kan du legge til din egen logikk for å sende skjemaet til en server eller behandle dataene på annen måte
+    // I dette eksemplet vises bare en bekreftelsesmelding ved hjelp av alert()
+    alert('Skjemaet er sendt. Takk for din henvendelse!');
+    form.reset();
+  }
+</script>
+    
+  
+
+
+</body>
+</html>
